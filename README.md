@@ -5,8 +5,8 @@ Access all information that Riot provides using thier API. This is the simplest
 node module that you could possibly use to gather information from Riot.
 
 **Please refer to the [Riot Games Official API](https://developer.riotgames.com/api/methods). 
-Also, please note that when an update occures to a specific API that you are using, please report it
-[on the github repo](https://github.com/hardtacos/riot-games-api-nodejs/issues).**
+Also, please note that when an update occures to a specific API that you are using, it will 
+most likely break. If this happens, please report it [on the github repo](https://github.com/hardtacos/riot-games-api-nodejs/issues).**
 
 Installation
 ------------
