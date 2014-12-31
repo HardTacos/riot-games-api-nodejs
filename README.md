@@ -8,6 +8,30 @@ node module that you could possibly use to gather information from Riot.
 Also, please note that when an update occures to a specific API that you are using, it will 
 most likely break. If this happens, please report it [on the github repo](https://github.com/hardtacos/riot-games-api-nodejs/issues).**
 
+Quick Example
+-------------
+```js
+riot.champion.id(
+    settings.region,
+    '21',
+    {},
+    function(err, data) {
+        if (err instanceof Error) {
+            console.log("Error 1: " + err);
+            return 0;
+        }
+        else {
+            var rankedEnabled = data.rankedPlayEnabled;
+            if (rankedEnabled == true){
+                console.log('Champion 21 (Miss Fortune) can be played in ranked');
+            } else {
+                console.log('Champion 21 (Miss Fortune) can not be played in ranked');
+            }
+        }
+    }
+)
+```
+
 Installation
 ------------
 
@@ -108,7 +132,7 @@ Messages:
 
 ===========================================================================================
 
-champion
+champion-v1.2
 --------
 ###### Retrieve Champion Information
 
@@ -130,7 +154,7 @@ riot.champion.id(
 ===========================================================================================
 
 
-game
+game-v1.3
 ----
 ###### Retrieve recent games by summoner ID
 
@@ -145,7 +169,7 @@ riot.game.bySummoner(
 ===========================================================================================
 
 
-league
+league-v2.5
 ----
 
 Retrieve league information for both individuals and teams
@@ -186,7 +210,7 @@ riot.league.challenger(
 ===========================================================================================
 
 
-staticData
+staticData-v1.2
 ----
 
 Retrieve static information about League of Legends (i.e. champions, runes, masteries, items, etc...)
@@ -198,7 +222,7 @@ Retrieve static information about League of Legends (i.e. champions, runes, mast
 ===========================================================================================
 
 
-lolStatus
+lolStatus-v1.0
 ----
 
 Retrieve server statuses
@@ -211,20 +235,53 @@ riot.lolStatus(console.log).region(settings.region);
 ===========================================================================================
 
 
-match
+match-v2.2
 ----
 
 Retrieve match by match ID.
-
-...
 
 
 ===========================================================================================
 
 
-Talk
+matchhistory-v2.2
 ----
-### ( path, [fields], callback, [oldJsonKey] )
+
+Retrieve match history by match ID.
+
+
+===========================================================================================
+
+
+stats-v1.3
+----
+
+Retrieve stats by summoner ID.
+
+
+===========================================================================================
+
+
+summoner-v1.4
+----
+
+Retrieve summoner information by summoner name or summonerID.
+
+
+===========================================================================================
+
+
+teams-v2.4
+----
+
+Retrieve teams information by either summonerId or teamID
+
+
+===========================================================================================
+
+
+talk
+----
 
 Directly talk to the API. This function takes care of connecting and calling the callback only when valid JSON is returned.
 
