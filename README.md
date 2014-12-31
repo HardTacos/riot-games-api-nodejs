@@ -59,7 +59,9 @@ Destroy the request after this number of *milliseconds*. Default: 30000 (30 sec)
 ### Example:
 
 ```
-
+var riot = require('riot-games-api-nodejs')
+riot.developerKey = '1234578-1234-1234-123456789000'
+riot.static.champions( "na", {}, cb );
 ```
 
 
@@ -131,8 +133,7 @@ game
 ```js
 riot.game.bySummoner(
     "na",
-    "5908", 
-    {},
+    "5908", {},
     console.log
 )
 ```
@@ -148,41 +149,35 @@ Retrieve league information for both individuals and teams
 ```js
 riot.league.bySummoner(
     "na",
-    "5908", 
-    {},
+    "5908", {},
     console.log
 );
 
 riot.league.bySummonerEntry(
     "na",
-    "5908, xxxxx", 
-    {},
+    "5908, xxxxx", {},
     console.log
 );
 
 riot.league.byTeam(
     "na",
-    "TEAM-c80824c9-c568-42de-bdbb-271543b209e1", 
-    {},
+    "TEAM-c80824c9-c568-42de-bdbb-271543b209e1", {},
     console.log
 );
 
 riot.league.byTeamEntry(
     "na",
-    "TEAM-c80824c9-c568-42de-bdbb-271543b209e1, xxxxx", 
-    {},
+    "TEAM-c80824c9-c568-42de-bdbb-271543b209e1, xxxxx", {},
     console.log
 );
 
 riot.league.challenger(
-    "na", 
-    {
+    "na", {
     	type : 'RANKED_SOLO_5X5'
     },
     console.log
 );
 ```
-...
 
 ===========================================================================================
 
@@ -204,7 +199,10 @@ lolStatus
 
 Retrieve server statuses
 
-...
+```js
+riot.lolStatus(console.log).shards();
+riot.lolStatus(console.log).region(settings.region);
+```
 
 ===========================================================================================
 
