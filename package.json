@@ -1,0 +1,21 @@
+{
+    "name": "riot-games-api-nodejs",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "author": {
+        "name": "Patrick McHugh",
+        "email": "thehardtacos@gmail.com"
+    },
+    "homepage": "https://github.com/HardTacos/youtube-playlist-dl",
+    "repository": {
+    "type": "git",
+    "url": "git://github.com/HardTacos/youtube-playlist-dl"
+    },
+    "keywords": [
+    ],
+    "dependencies": {
+        "node-xml2json": "1.x.x",
+        "youtube-feeds" : "latest"
+    }
+}

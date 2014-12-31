@@ -215,9 +215,33 @@ staticData-v1.2
 
 Retrieve static information about League of Legends (i.e. champions, runes, masteries, items, etc...)
 
+```js
+riot.staticData.champions(
+    {},
+    console.log
+);
 
+riot.staticData.championsId(
+    pathParam.championId,
+    {},
+    console.log
+);
 
-...
+riot.staticData.item(
+    {
+        itemData : 'name, description'
+    },
+    console.log
+);
+
+riot.staticData.itemId(
+    '3454',
+    {
+        itemData : 'stats'
+    },
+    console.log
+);
+```
 
 ===========================================================================================
 
@@ -291,4 +315,3 @@ Directly talk to the API. This function takes care of connecting and calling the
 	path         string     full method path without leading slash
 	fields       object     GET parameters
 	callback     function   callback function to receive results
-	region       string     used within path
