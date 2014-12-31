@@ -16,28 +16,31 @@ npm install riot-games-api-nodejs
 ```
 
 ```js
-var youtube = require('riot-games-api-nodejs')
+var riot = require('riot-games-api-nodejs')
 ```
 
 ### From Github
 
 The code on Github is the most recent version, but may be untested.
 
-```
+````
+git clone https://github.com/hardtacos/riot-games-api-nodejs
+cd riot-games-api-nodejs
+npm install
 
-```
-
-```
-
-```
-
+var riot = require('/path/to/riot-games-api-nodejs')
+````
 
 Usage
 -----
 
-````
-````
+```js
+// load the module
+var riot = require('riot-games-api-nodejs')
 
+// search parkour videos
+riot.leaugue.bySummoner("na", "123456", {}, console.log)
+```
 
 Configuration
 -------------
@@ -101,20 +104,38 @@ Messages:
 
 champion
 --------
+###### Retrieve Champion Information
 
-Retrieve Champion Information
+```js
+riot.champion.all(
+    "na", {
+        'freeToPlay': 'true'
+    },
+    console.log
+);
 
-...
+riot.champion.id(
+    "na",
+    "21", {},
+    console.log
+)
+```
 
 ===========================================================================================
 
 
 game
 ----
+###### Retrieve recent games by summoner ID
 
-Retrieve recent games by summoner ID
-
-...
+```js
+riot.game.bySummoner(
+    "na",
+    "5908", 
+    {},
+    console.log
+)
+```
 
 ===========================================================================================
 
@@ -124,6 +145,43 @@ league
 
 Retrieve league information for both individuals and teams
 
+```js
+riot.league.bySummoner(
+    "na",
+    "5908", 
+    {},
+    console.log
+);
+
+riot.league.bySummonerEntry(
+    "na",
+    "5908, xxxxx", 
+    {},
+    console.log
+);
+
+riot.league.byTeam(
+    "na",
+    "TEAM-c80824c9-c568-42de-bdbb-271543b209e1", 
+    {},
+    console.log
+);
+
+riot.league.byTeamEntry(
+    "na",
+    "TEAM-c80824c9-c568-42de-bdbb-271543b209e1, xxxxx", 
+    {},
+    console.log
+);
+
+riot.league.challenger(
+    "na", 
+    {
+    	type : 'RANKED_SOLO_5X5'
+    },
+    console.log
+);
+```
 ...
 
 ===========================================================================================
@@ -133,6 +191,7 @@ staticData
 ----
 
 Retrieve static information about League of Legends (i.e. champions, runes, masteries, items, etc...)
+
 
 
 ...
@@ -173,5 +232,4 @@ Directly talk to the API. This function takes care of connecting and calling the
 	path         string     full method path without leading slash
 	fields       object     GET parameters
 	callback     function   callback function to receive results
-	oldJsonKey   boolean    force old XML-to-JSON format instead of clean JSON-C
-	                        its value is the key containing the expected results
+	region       string     used within path
