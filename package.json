@@ -15,7 +15,6 @@
     "keywords": [
     ],
     "dependencies": {
-        "node-xml2json": "1.x.x",
-        "youtube-feeds" : "latest"
+        "node-xml2json": "1.x.x"
     }
 }

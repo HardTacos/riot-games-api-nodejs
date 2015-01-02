@@ -12,7 +12,6 @@ Quick Example
 -------------
 ```js
 riot.champion.id(
-    settings.region,
     '21',
     {},
     function(err, data) {
@@ -67,7 +66,7 @@ Usage
 var riot = require('riot-games-api-nodejs')
 
 // search parkour videos
-riot.leaugue.bySummoner("na", "123456", {}, console.log)
+riot.leaugue.bySummoner( "123456", {}, console.log)
 ```
 
 Configuration
@@ -89,7 +88,7 @@ Destroy the request after this number of *milliseconds*. Default: 30000 (30 sec)
 ```
 var riot = require('riot-games-api-nodejs')
 riot.developerKey = '1234578-1234-1234-123456789000'
-riot.static.champions( "na", {}, cb );
+riot.static.champions( {}, cb );
 ```
 
 
@@ -138,14 +137,13 @@ champion-v1.2
 
 ```js
 riot.champion.all(
-    "na", {
+     {
         'freeToPlay': 'true'
     },
     console.log
 );
 
 riot.champion.id(
-    "na",
     "21", {},
     console.log
 )
@@ -160,7 +158,7 @@ game-v1.3
 
 ```js
 riot.game.bySummoner(
-    "na",
+    
     "5908", {},
     console.log
 )
@@ -176,31 +174,27 @@ Retrieve league information for both individuals and teams
 
 ```js
 riot.league.bySummoner(
-    "na",
     "5908", {},
     console.log
 );
 
 riot.league.bySummonerEntry(
-    "na",
     "5908, xxxxx", {},
     console.log
 );
 
 riot.league.byTeam(
-    "na",
     "TEAM-c80824c9-c568-42de-bdbb-271543b209e1", {},
     console.log
 );
 
 riot.league.byTeamEntry(
-    "na",
     "TEAM-c80824c9-c568-42de-bdbb-271543b209e1, xxxxx", {},
     console.log
 );
 
 riot.league.challenger(
-    "na", {
+    {
     	type : 'RANKED_SOLO_5X5'
     },
     console.log
@@ -261,6 +255,13 @@ riot.lolStatus(console.log).region(settings.region);
 
 match-v2.2
 ----
+```js
+riot.match.match(
+    pathParam.summonerId,
+    {},
+    console.log
+)
+```
 
 Retrieve match by match ID.
 
@@ -270,6 +271,13 @@ Retrieve match by match ID.
 
 matchhistory-v2.2
 ----
+```js
+riot.matchHistory.matchHistory(
+    pathParam.summonerId,
+    {},
+    console.log
+)
+```
 
 Retrieve match history by match ID.
 
@@ -280,6 +288,24 @@ Retrieve match history by match ID.
 stats-v1.3
 ----
 
+```js
+riot.stats.ranked(
+    pathParam.summonerId,
+    {
+        season : 'SEASON4'
+    },
+    console.log
+);
+
+riot.stats.summary(
+    pathParam.summonerId,
+    {
+        season : 'SEASON4'
+    },
+    console.log
+)
+```
+
 Retrieve stats by summoner ID.
 
 
@@ -289,6 +315,38 @@ Retrieve stats by summoner ID.
 summoner-v1.4
 ----
 
+```js
+riot.summoner.byName(
+    'Dyrus', //or 'Dyrus,I DIED TO WOLVES,InsertSmurfHere'
+    {},
+    console.log
+);
+
+riot.summoner.summonerIds(
+    '5908' //or '5908,52322873,44979373'
+    {},
+    console.log
+);
+
+riot.summoner.masteries(
+    '5908' //or '5908,52322873,44979373'
+    {},
+    console.log
+);
+
+riot.summoner.name(
+    '5908' //or '5908,52322873,44979373'
+    {},
+    console.log
+);
+
+riot.summoner.runes(
+    '5908' //or '5908,52322873,44979373'
+    {},
+    console.log
+);
+```
+
 Retrieve summoner information by summoner name or summonerID.
 
 
@@ -297,6 +355,20 @@ Retrieve summoner information by summoner name or summonerID.
 
 teams-v2.4
 ----
+
+```js
+riot.team.bySummonerId(
+    '5908',
+    {},
+    console.log
+);
+
+riot.team.teamId(
+    'TEAM-c80824c9-c568-42de-bdbb-271543b209e1', //or multiple teams, separated by commas
+    {},
+    console.log
+);
+```
 
 Retrieve teams information by either summonerId or teamID
 
