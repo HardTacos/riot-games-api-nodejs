@@ -1,16 +1,16 @@
 {
     "name": "riot-games-api-nodejs",
-    "version": "1.0.0",
-    "description": "",
+    "version": "1.0.1",
+    "description": "Access Riot Games API with ease.",
     "main": "app.js",
     "author": {
         "name": "Patrick McHugh",
         "email": "thehardtacos@gmail.com"
     },
-    "homepage": "https://github.com/HardTacos/youtube-playlist-dl",
+    "homepage": "https://github.com/HardTacos/riot-games-api-nodejs",
     "repository": {
     "type": "git",
-    "url": "git://github.com/HardTacos/youtube-playlist-dl"
+    "url": "git://github.com/HardTacos/riot-games-api-nodejs"
     },
     "keywords": [
     ],

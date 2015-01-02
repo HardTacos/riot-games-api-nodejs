@@ -13,7 +13,7 @@ var pathParam = {
     type : 'RANKED_SOLO_5X5'
 }
 
-riot.developerKey = 'afc3b634-a443-4919-adda-a60877f3fa32';
+riot.developerKey = 'YOUR KEY GOES HERE';
 
 riot.settings = {
    region : 'na'
