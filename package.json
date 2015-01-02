@@ -1,6 +1,6 @@
 {
     "name": "riot-games-api-nodejs",
-    "version": "1.0.1",
+    "version": "1.0.4",
     "description": "Access Riot Games API with ease.",
     "main": "app.js",
     "author": {
@@ -13,8 +13,23 @@
     "url": "git://github.com/HardTacos/riot-games-api-nodejs"
     },
     "keywords": [
+        "riot",
+        "games",
+        "api",
+        "league",
+        "of",
+        "legends",
+        "champions",
+        "match",
+        "history",
+        "rito",
+        "reference"
     ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/hardtacos/riot-games-api-nodejs/issues"
+    },
     "dependencies": {
         "node-xml2json": "1.x.x"
-    }
+    },
 }
