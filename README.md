@@ -1,6 +1,8 @@
 riot-games-api-nodejs
 ==============
 
+[![NPM](https://nodei.co/npm/riot-games-api-nodejs.png?downloads=true&stars=true)](https://nodei.co/npm/riot-games-api-nodejs/)
+
 Access all information that Riot provides using thier API. This is an extremly simple
 node module that allows you to gather information from Riot.
 
@@ -65,7 +67,7 @@ Usage
 // load the module
 var riot = require('riot-games-api-nodejs')
 
-// search parkour videos
+// search by summoner id, their league information
 riot.leaugue.bySummoner( "123456", {}, console.log)
 ```
 
@@ -216,7 +218,7 @@ riot.staticData.champions(
 );
 
 riot.staticData.championsId(
-    pathParam.championId,
+    "21",
     {},
     console.log
 );
@@ -257,7 +259,7 @@ match-v2.2
 ----
 ```js
 riot.match.match(
-    pathParam.summonerId,
+    "5908",
     {},
     console.log
 )
@@ -273,7 +275,7 @@ matchhistory-v2.2
 ----
 ```js
 riot.matchHistory.matchHistory(
-    pathParam.summonerId,
+    "5908",
     {},
     console.log
 )
@@ -290,7 +292,7 @@ stats-v1.3
 
 ```js
 riot.stats.ranked(
-    pathParam.summonerId,
+    "5908",
     {
         season : 'SEASON4'
     },
@@ -298,7 +300,7 @@ riot.stats.ranked(
 );
 
 riot.stats.summary(
-    pathParam.summonerId,
+    "5908",
     {
         season : 'SEASON4'
     },
