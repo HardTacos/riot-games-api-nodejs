@@ -2,7 +2,7 @@
     "name": "riot-games-api-nodejs",
     "version": "1.0.6",
     "description": "Access Riot Games API with ease.",
-    "main": "app.js",
+    "main": "lib/riot-games-api-nodejs.js",
     "author": {
         "name": "Patrick McHugh",
         "email": "thehardtacos@gmail.com"
