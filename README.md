@@ -1,6 +1,8 @@
 riot-games-api-nodejs
 ==============
 
+This module is no longer maintained. Pull requests will still be accepted.
+
 [![NPM](https://nodei.co/npm/riot-games-api-nodejs.png?downloads=true&stars=true)](https://nodei.co/npm/riot-games-api-nodejs/)
 
 Access all information that Riot provides using thier API. This is an extremly simple
