@@ -5,7 +5,7 @@ This module is no longer maintained. Pull requests will still be accepted.
 
 [![NPM](https://nodei.co/npm/riot-games-api-nodejs.png?downloads=true&stars=true)](https://nodei.co/npm/riot-games-api-nodejs/)
 
-Access all information that Riot provides using thier API. This is an extremly simple
+Access all information that Riot provides using their API. This is an extremly simple
 node module that allows you to gather information from Riot.
 
 **Please refer to the [Riot Games Official API](https://developer.riotgames.com/api/methods). 
